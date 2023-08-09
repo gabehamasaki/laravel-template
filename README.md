@@ -7,7 +7,7 @@ Clone Repositório
 git clone https://github.com/gabehamasaki/php-laravel-template.git laravel-app
 ```
 ```sh
-cd app-laravel
+cd laravel-app
 ```
 
 
