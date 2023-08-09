@@ -4,7 +4,7 @@
 ### Passo a passo
 Clone Repositório
 ```sh
-git clone https://github.com/gabehamasaki/php-laravel-template.git
+git clone https://github.com/gabehamasaki/php-laravel-template.git laravel-app
 ```
 ```sh
 cd app-laravel
