@@ -11,27 +11,27 @@
             {{ Session::get('success') }}
         </div>
     @endif
-    <table class="table table-hover">
-        <thead class="table-secondary">
+    <table class="table table-responsive table-hover">
+        <thead class="table-primary">
             <tr>
-                <th>#</th>
-                <th>Title</th>
-                <th>Price</th>
-                <th>Product Code</th>
-                <th>Description</th>
-                <th>Action</th>
+                <th class="text-center">#</th>
+                <th class="text-center">Title</th>
+                <th class="text-center">Price</th>
+                <th class="text-center">Product Code</th>
+                <th class="text-center">Description</th>
+                <th class="text-center">Action</th>
             </tr>
         </thead>
         <tbody>
             @if($products->count() > 0)
                 @foreach($products as $rs)
                     <tr>
-                        <td class="align-middle">{{ $loop->iteration }}</td>
-                        <td class="align-middle">{{ $rs->title }}</td>
-                        <td class="align-middle">{{ $rs->price }}</td>
-                        <td class="align-middle">{{ $rs->product_code }}</td>
-                        <td class="align-middle">{{ $rs->description }}</td>
-                        <td class="align-middle">
+                        <td class="align-middle text-center">{{ $rs->id }}</td>
+                        <td class="align-middle text-center">{{ $rs->title }}</td>
+                        <td class="align-middle text-center">{{ $rs->price }}</td>
+                        <td class="align-middle text-center">{{ $rs->product_code }}</td>
+                        <td class="align-middle text-center">{{ $rs->description }}</td>
+                        <td class="align-middle d-flex justify-content-center">
                             <div class="btn-group" role="group" aria-label="Basic example">
                                 <a href="{{ route('product.show', $rs->id) }}" type="button" class="btn btn-secondary">Detail</a>
                                 <a href="{{ route('product.edit', $rs->id)}}" type="button" class="btn btn-warning">Edit</a>
@@ -46,7 +46,7 @@
                 @endforeach
             @else
                 <tr>
-                    <td class="text-center" colspan="5">Product not found</td>
+                    <td class="text-center fw-bold" colspan="6">Product not found</td>
                 </tr>
             @endif
         </tbody>
