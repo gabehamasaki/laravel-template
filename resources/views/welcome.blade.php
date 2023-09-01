@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('body')
-<h1>Hello World! Laravel 10</h1>
+    <v-hello-world />
 @endsection
