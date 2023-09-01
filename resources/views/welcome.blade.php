@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('body')
 <h1>Hello World! Laravel 10</h1>
