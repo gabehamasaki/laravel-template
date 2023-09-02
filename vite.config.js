@@ -1,9 +1,17 @@
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue'
 import path from 'path';
 
+const env = loadEnv(
+    'mock',
+    process.cwd(),
+    '');
+
 export default defineConfig({
+    server: {
+        host: env.APP_URL.replace('http://', ''),  // Add this to force IPv4 only
+    },
     plugins: [
         vue({
             template: {
